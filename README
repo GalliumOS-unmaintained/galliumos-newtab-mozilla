@@ -1,0 +1,7 @@
+galliumos-newtab-mozilla
+
+This is a small addon that will redirect the new tab page of Firefox to https://galliumos.org/home/.
+
+mozilla/ is where the jpm project is found
+
+system/ is where the xpi Firefox addon, and the nessesary files to install it to the system are found, including Debian package management.

@@ -1,0 +1,16 @@
+{
+  "title": "home.galliumos.org",
+  "name": "homegalliumosorg",
+  "id": "mozillahome@galliumos.org",
+  "version": "1.0",
+  "description": "Replace the Firefox New Tab page with https://galliumos.org/home/",
+  "main": "index.js",
+  "author": "GalliumOS",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
