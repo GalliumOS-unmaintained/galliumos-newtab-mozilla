@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+package = galliumos-newtab-mozilla
+build:
+	touch build
+
+clean:
+	rm -f build
+	rm -f `find . -name "*~"`
+	rm -rf debian/tmp
+
+binary-arch: build
+	rm -rf debian/tmp
+	install -d debian/tmp/DEBIAN
+	install -d debian/tmp/usr/share/mozilla/extensions/\{ec8030f7-c20a-464f-9b0e-13a3a9e97384\}
+	install -p -m 755 usr/share/mozilla/extensions/\{ec8030f7-c20a-464f-9b0e-13a3a9e97384\}/* debian/tmp/usr/share/mozilla/extensions/\{ec8030f7-c20a-464f-9b0e-13a3a9e97384\}
+	dpkg-gencontrol -pgalliumos-newtab-mozilla
+	dpkg-deb --build -Zgzip debian/tmp ..
+
+binary: binary-arch
+
+.PHONY: binary binary-arch clean

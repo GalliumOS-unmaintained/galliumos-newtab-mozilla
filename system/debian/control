@@ -1,0 +1,12 @@
+Source: galliumos-newtab-mozilla
+Maintainer: Colton DRG <coltondrg@galliumos.org>
+Section: web
+Priority: optional
+Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9)
+
+Package: galliumos-newtab-mozilla
+Architecture: all
+Depends: 
+Description: GalliumOS New Tab page for Firefox
+ Replace the New Tab in Firefox with https://galliumos.org/home/
